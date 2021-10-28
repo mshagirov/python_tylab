@@ -2,6 +2,8 @@
 ---
 > Following installation steps assume that we will use Anaconda python distribution (individual edition, Python 3.7 or later).
 
+Please follow these four steps to install and start using jupyter notebook.
+
 ## 1. Anaconda Python Distribution
 Install Anaconda individual edition.
 - Review your system requirements and follow steps in [anaconda website](https://docs.anaconda.com/anaconda/install/#).
