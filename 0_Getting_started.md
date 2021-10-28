@@ -4,7 +4,7 @@ Getting Started
 
 # Installing Anaconda Python Distribution
 1. Install Anaconda individual edition. Review your system requirements and follow steps in [anaconda website](https://docs.anaconda.com/anaconda/install/#)
-    -
+    - A
     - \[Suggested\] Use default installation/destination directory when installing anaconda.
 1. Set `PATH` environment variable:
     - **If you already added `anaconda` to the path variable, skip to the next step "Check your installation"**.
