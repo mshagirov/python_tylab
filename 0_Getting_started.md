@@ -13,18 +13,20 @@ Install Anaconda individual edition.
 
 ### Windows
 ([source](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14))):
-    1. On the `Start` menu
-      - \[Older than Win10\] right-click `Computer`.
-      - \[Win10\] Click the `Settings` button (gear icon), or type "this pc" and right-click `This PC` app.
-    1. Go to `Properties` (old Windows OS), or `Settings` (Win10)
-      - \[Older than Win10\] `Properties`-->`System`-->`Advanced system settings`-->`Advanced` tab-->`System Properties`-->`Environment Variables`
-      - \[Win10\] On the panel located on the right hand side find and open `Advanced system settings`, then click on `Environment Variables`.
-    1. On the `Environment Variables` dialog box, go to `System Variables` box.
-    1. Select `Path` variable and then press `Edit`.
-      - \[Older than Win10\] In `System Variable` dialog box, scroll to the end of the string in the `Variable value` box and add a semicolon (`;`).
-      - \[Older than Win10\] Append the new path (location of Anaconda binary files, `anaconda3\bin\`) after the semicolon, e.g.:
-      - \[Win10\] Click `New` and type in the anaconda binaries path.
-    1. Save the environment variable.
+
+1. On the `Start` menu
+  - \[Older than Win10\] right-click `Computer`.
+  - \[Win10\] Click the `Settings` button (gear icon), or type "this pc" and right-click `This PC` app.
+1. Go to `Properties` (old Windows OS), or `Settings` (Win10)
+  - \[Older than Win10\] `Properties`-->`System`-->`Advanced system settings`-->`Advanced` tab-->`System Properties`-->`Environment Variables`
+  - \[Win10\] On the panel located on the right hand side find and open `Advanced system settings`, then click on `Environment Variables`.
+1. On the `Environment Variables` dialog box, go to `System Variables` box.
+1. Click `Path` variable and then press `Edit`.
+  - \[Older than Win10\] In `System Variable` dialog box, scroll to the end of the string in the `Variable value` box and add a semicolon (`;`).
+  - \[Older than Win10\] Append the new path (location of Anaconda binary files, `anaconda3\bin\`) after the semicolon, e.g.:
+  - \[Win10\] Click `New` and type in the anaconda binaries path.
+1. Save the environment variable.
+
 ### Mac OS
 Starting with Catalina, macOS uses [zsh as the default shell](https://support.apple.com/en-us/HT208050).
 
