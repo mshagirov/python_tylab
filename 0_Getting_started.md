@@ -2,13 +2,13 @@
 ---
 > Following installation steps assume that we will use Anaconda python distribution (individual edition, Python 3.7 or later).
 
-## 1. Installing Anaconda Python Distribution
+## 1. Anaconda Python Distribution
 Install Anaconda individual edition.
 - Review your system requirements and follow steps in [anaconda website](https://docs.anaconda.com/anaconda/install/#).
 - \[Suggested\] Use default installation/destination directory when installing anaconda.
 - \[Suggested\] When asked, select "add Anaconda to your PATH" option.
 
-## 2. Set `PATH` environment variable:
+## 2. `Path` environment variable
 **If you already added `anaconda` to the path variable, skip to the next step ["Check your installation"](#3-check-your-anaconda-installation)**.
 - [Windows instructions](#setting-path-variables-on-windows).
 - [Mac OS instructions](#setting-path-variables-on-mac-os).
@@ -77,5 +77,11 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
   ```
   location for the new installation of python in `anaconda3` directory, e.g. for python it should print `/Users/USER/anaconda3/bin/python` where `USER` is your user name. You can check your user name by entering `echo $USER` in terminal.
 
+## 4. Run Jupyter Notebook. 
+In terminal (`cmd` command shell for Windows), enter
+```
+jupyter notebook
+```
+this starts the jupyter notebook server at `http://localhost:8888` and open it using the default browser (if the port 8888 is being used by another application jupyter will automatically serve the notebook site using another port, you can see the address/link in the terminal after a line with `The Jupyter Notebook is running at:`).
 
 [winlogo]: ./images/winlogo.png
