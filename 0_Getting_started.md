@@ -48,6 +48,11 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
 
 ## Check your anaconda installation.
 - Windows
-  - In Cmd
+  1. Press **windows logo key** <kbd>![Windows Key][winlogo]</kbd>+ <kbd>R</kbd> to open `cmd`.
+  1. type
 - Mac os
-  - In terminal.
+  - Press <kbd>Cmd</kbd> + <kbd>space</kbd>, then type "terminal" and press enter to open  terminal.
+
+
+
+[winlogo]: ./images/winlogo.png
