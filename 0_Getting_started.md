@@ -13,13 +13,13 @@ Install Anaconda individual edition.
 - [Windows instructions](#setting-path-variables-in-windows).
 - [Mac OS instructions](#setting-path-variables-in-mac-os).
 
-### Setting Path Variables in Windows
+### Setting Path Variables on Windows
 1. On the `Start` menu
   - \[Older than Win10\] right-click `Computer`.
   - \[Win10\] Click the `Settings` button (gear icon), or type "this pc" and right-click `This PC` app.
 1. Go to
   - \[Older than Win10\] `Properties`-->`System`-->`Advanced system settings`-->`Advanced` tab-->`System Properties`-->`Environment Variables`
-  - \[Win10\] Go to `Settings`-->`System`-->`Abput` (on the left-bottom)-->`Advanced system settings` (panel on the right)-->`Environment Variables`.
+  - \[Win10\] Go to `Settings`-->`System`-->`About` (on the left-bottom)-->`Advanced system settings` (panel on the right)-->`Environment Variables`.
 1. On the `Environment Variables` dialog box, go to `System Variables` box.
 1. Click `Path` variable and then press `Edit`.
   - \[Older than Win10\] In `System Variable` dialog box, scroll to the end of the string in the `Variable value` box and add a semicolon (`;`). Append the new path (location of Anaconda binary files) after the semicolon (`;`).
@@ -28,7 +28,7 @@ Install Anaconda individual edition.
 
 1. Save the environment variable.
 
-### Setting Path Variables in Mac OS
+### Setting Path Variables on Mac OS
 Starting with Catalina, macOS uses [zsh as the default shell](https://support.apple.com/en-us/HT208050).
 
 - \[Suggested\] Edit `~/.zshrc`
