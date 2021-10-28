@@ -10,6 +10,8 @@ Install Anaconda individual edition.
 
 ## 2. Set `PATH` environment variable:
 **If you already added `anaconda` to the path variable, skip to the next step "Check your installation"**.
+- [Windows instructions](#windows).
+- [Mac OS instructions](#mac-os).
 
 ### Windows
 ([source](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14))):
