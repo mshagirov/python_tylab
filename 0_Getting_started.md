@@ -15,7 +15,7 @@ Install Anaconda individual edition.
 
 ### Setting Path Variables on Windows
 1. On the `Start` menu
-  - \[Before Win10\] right-click `Computer`.
+  - \[Before Win10\] right-click `Computer` then click `Properties`.
   - \[Win10\] Click the `Settings` button (gear icon, or type "this pc" and right-click `This PC` app then click `Properties`).
 1. Go to
   - \[Before Win10\] `Properties`-->`System`-->`Advanced system settings`-->`Advanced` tab-->`System Properties`-->`Environment Variables`
