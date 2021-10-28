@@ -6,7 +6,7 @@ Getting Started
 1. Install Anaconda individual edition. Review your system requirements and follow steps in [anaconda website](https://docs.anaconda.com/anaconda/install/#)
   -
   - \[Suggested\] Use default installation/destination directory when installing anaconda.
-1. Set `PATH` environment variable:
+2. Set `PATH` environment variable:
   - **If you already added `anaconda` to the path variable, skip to the next step "Check your installation"**.
   - Windows ([source](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14))):
     - On the `Start` menu, right-click `Computer`.
@@ -29,4 +29,4 @@ Getting Started
       ```
       4. Save `.zshrc` file.
     - For other way to add path variables using `/etc/paths.d` directory see "method 2" section of this [blog post](https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/).
-1. Check your anaconda installation.
+3. Check your anaconda installation.
