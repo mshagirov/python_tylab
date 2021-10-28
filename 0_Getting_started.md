@@ -10,12 +10,10 @@ Install Anaconda individual edition.
 
 ## 2. Set `PATH` environment variable:
 **If you already added `anaconda` to the path variable, skip to the next step "Check your installation"**.
-- [Windows instructions](#windows).
-- [Mac OS instructions](#mac-os).
+- [Windows instructions](#setting-path-variables-in-windows).
+- [Mac OS instructions](#setting-path-variables-in-mac-os).
 
-### Windows
-([source](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14))):
-
+### Setting Path Variables in Windows
 1. On the `Start` menu
   - \[Older than Win10\] right-click `Computer`.
   - \[Win10\] Click the `Settings` button (gear icon), or type "this pc" and right-click `This PC` app.
@@ -27,10 +25,10 @@ Install Anaconda individual edition.
   - \[Older than Win10\] In `System Variable` dialog box, scroll to the end of the string in the `Variable value` box and add a semicolon (`;`). Append the new path (location of Anaconda binary files) after the semicolon (`;`).
   - \[Win10\] Click `New` and type in the anaconda binaries path.
   > \[Default paths\] Add following `C:\Users\USER\anaconda3\`, `C:\Users\USER\anaconda3\Scripts\`.
-  
+
 1. Save the environment variable.
 
-### Mac OS
+### Setting Path Variables in Mac OS
 Starting with Catalina, macOS uses [zsh as the default shell](https://support.apple.com/en-us/HT208050).
 
 - \[Suggested\] Edit `~/.zshrc`
@@ -47,12 +45,29 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
     4. Save `.zshrc` file.
 - For other way to add path variables, e.g. using `/etc/paths.d` directory see "method 2" section of this [blog post](https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/).
 
-## Check your anaconda installation.
-- Windows
+## 3. Check your anaconda installation.
+- [Windows](#checking-your-installation-on-windows)
+- [Mac OS](#checking-your-installation-on-mac-os)
+### Checking Your Installation on Windows
+
   1. Press **windows logo key** <kbd>![Windows Key][winlogo]</kbd>+ <kbd>R</kbd> to open `cmd`. Alternatively use windows terminal app (with cmd, git bash etc.).
-  1. type
-- Mac os
-  - Press <kbd>Cmd</kbd> + <kbd>space</kbd>, then type "terminal" and press enter to open  terminal.
+  1. Type following (and press enter for each):
+  ```
+  where conda
+  ```
+  this should print out the location of `conda.exe`, next type
+  ```
+  where python
+  ```
+  same for `python.exe`, and
+  ```
+  where jupyter
+  ```
+  should print location of `jupyter.exe`
+
+### Checking Your Installation on Mac OS
+  1. Press <kbd>Cmd</kbd> + <kbd>space</kbd>, then type "terminal" and press enter to open  terminal.
+  1. Entering `which conda`, and `which python` should print out locations for conda and the new installation of python in `anaconda3` directory (e.g. `/Users/USER/anaconda3/bin/python`).
 
 
 
