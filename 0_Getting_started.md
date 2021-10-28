@@ -37,13 +37,13 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
     ```
     open -a TextEdit ~/.zshrc
     ```
-    1. Find the last line starting with `export PATH=` (tip: use `Cmd+F`; if there is none, just use the last line of the file).
-    1. Append following lines after the line you found in the previous step, *replace* the `/Users/USER/anaconda3/bin` *part with the correct location of Anaconda binary files* (line starting with `#` is a comment line):
+    2. Find the last line starting with `export PATH=` (tip: use `Cmd+F`; if there is none, just use the last line of the file).
+    3. Append following lines after the line you found in the previous step, *replace* the `/Users/USER/anaconda3/bin` *part with the correct location of Anaconda binary files* (line starting with `#` is a comment line):
     ```
     # Anaconda path
     export PATH="/Users/USER/anaconda3/bin:$PATH"
     ```
-    1. Save `.zshrc` file.
+    4. Save `.zshrc` file.
 - For other way to add path variables, e.g. using `/etc/paths.d` directory see "method 2" section of this [blog post](https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/).
 
 ## Check your anaconda installation.
