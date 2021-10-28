@@ -10,8 +10,8 @@ Install Anaconda individual edition.
 
 ## 2. Set `PATH` environment variable:
 **If you already added `anaconda` to the path variable, skip to the next step ["Check your installation"](#3-check-your-anaconda-installation)**.
-- [Windows instructions](#setting-path-variables-in-windows).
-- [Mac OS instructions](#setting-path-variables-in-mac-os).
+- [Windows instructions](#setting-path-variables-on-windows).
+- [Mac OS instructions](#setting-path-variables-on-mac-os).
 
 ### Setting Path Variables on Windows
 1. On the `Start` menu
