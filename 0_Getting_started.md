@@ -32,7 +32,7 @@ Install Anaconda individual edition.
 Starting with Catalina, macOS uses [zsh as the default shell](https://support.apple.com/en-us/HT208050).
 
 - \[Suggested\] Edit `~/.zshrc`
-    1. Open terminal, in terminal type the following and press enter.
+    1. Open terminal (press <kbd>Cmd</kbd> + <kbd>space</kbd>, then type "terminal"). In terminal, type the following and press enter.
     ```
     open -a TextEdit ~/.zshrc
     ```
