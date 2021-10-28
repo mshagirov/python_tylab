@@ -1,8 +1,8 @@
-Getting Started
+# Getting Started
 ---
 > Following installation steps assume that we will use Anaconda python distribution (individual edition, Python 3.7 or later).
 
-# Installing Anaconda Python Distribution
+## Installing Anaconda Python Distribution
 1. Install Anaconda individual edition.
     - Review your system requirements and follow steps in [anaconda website](https://docs.anaconda.com/anaconda/install/#).
     - \[Suggested\] Use default installation/destination directory when installing anaconda.
