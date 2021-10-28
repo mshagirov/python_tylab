@@ -19,14 +19,15 @@ Install Anaconda individual edition.
 1. On the `Start` menu
   - \[Older than Win10\] right-click `Computer`.
   - \[Win10\] Click the `Settings` button (gear icon), or type "this pc" and right-click `This PC` app.
-1. Go to `Properties` (old Windows OS), or `Settings` (Win10)
+1. Go to
   - \[Older than Win10\] `Properties`-->`System`-->`Advanced system settings`-->`Advanced` tab-->`System Properties`-->`Environment Variables`
-  - \[Win10\] On the panel located on the right hand side find and open `Advanced system settings`, then click on `Environment Variables`.
+  - \[Win10\] Go to `Settings`-->`System`-->`Abput` (on the left-bottom)-->`Advanced system settings` (panel on the right)-->`Environment Variables`.
 1. On the `Environment Variables` dialog box, go to `System Variables` box.
 1. Click `Path` variable and then press `Edit`.
-  - \[Older than Win10\] In `System Variable` dialog box, scroll to the end of the string in the `Variable value` box and add a semicolon (`;`).
-  - \[Older than Win10\] Append the new path (location of Anaconda binary files, `anaconda3\bin\`) after the semicolon, e.g.:
+  - \[Older than Win10\] In `System Variable` dialog box, scroll to the end of the string in the `Variable value` box and add a semicolon (`;`). Append the new path (location of Anaconda binary files) after the semicolon (`;`).
   - \[Win10\] Click `New` and type in the anaconda binaries path.
+  > \[Default paths\] Add following `C:\Users\USER\anaconda3\`, `C:\Users\USER\anaconda3\Scripts\`.
+  
 1. Save the environment variable.
 
 ### Mac OS
@@ -48,7 +49,7 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
 
 ## Check your anaconda installation.
 - Windows
-  1. Press **windows logo key** <kbd>![Windows Key][winlogo]</kbd>+ <kbd>R</kbd> to open `cmd`.
+  1. Press **windows logo key** <kbd>![Windows Key][winlogo]</kbd>+ <kbd>R</kbd> to open `cmd`. Alternatively use windows terminal app (with cmd, git bash etc.).
   1. type
 - Mac os
   - Press <kbd>Cmd</kbd> + <kbd>space</kbd>, then type "terminal" and press enter to open  terminal.
