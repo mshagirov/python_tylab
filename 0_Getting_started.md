@@ -82,6 +82,6 @@ In terminal (or `cmd` command shell on Windows), enter
 ```
 jupyter notebook
 ```
-this starts the jupyter notebook server at `http://localhost:8888` and open it using the default browser (if the port 8888 is being used by another application jupyter will automatically serve the notebook site using another port, you can see the address/link in the terminal after a line with `The Jupyter Notebook is running at:`).
+this starts the jupyter notebook server at `http://localhost:8888` and opens it using your default browser (if the port 8888 is being used by another application jupyter will automatically serve the notebook site using another port, you can see the address/link in the terminal after a line with `The Jupyter Notebook is running at:`).
 
 [winlogo]: ./images/winlogo.png
