@@ -75,7 +75,7 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
   ```
   which python
   ```
-  location for the new installation of python in `anaconda3` directory, e.g. for python it should print `/Users/USER/anaconda3/bin/python` where `USER` is your user name. You can check your user name by entering `echo $USER` in terminal).
+  location for the new installation of python in `anaconda3` directory, e.g. for python it should print `/Users/USER/anaconda3/bin/python` where `USER` is your user name. You can check your user name by entering `echo $USER` in terminal.
 
 
 [winlogo]: ./images/winlogo.png
