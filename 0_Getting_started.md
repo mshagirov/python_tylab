@@ -67,8 +67,15 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
 
 ### Checking Your Installation on Mac OS
   1. Press <kbd>Cmd</kbd> + <kbd>space</kbd>, then type "terminal" and press enter to open  terminal.
-  1. Entering `which conda`, and `which python` should print out locations for conda and the new installation of python in `anaconda3` directory (e.g. `/Users/USER/anaconda3/bin/python`).
-
+  1. Entering following,
+  ```
+  which conda
+  ```
+  should print out locations for conda, and 
+  ```
+  which python
+  ```
+  location for the new installation of python in `anaconda3` directory, e.g. for python it should print `/Users/USER/anaconda3/bin/python` where `USER` is your user name. You can check your user name by entering `echo $USER` in terminal).
 
 
 [winlogo]: ./images/winlogo.png
