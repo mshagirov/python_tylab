@@ -292,7 +292,7 @@ Type 'copyright', 'credits' or 'license' for more information
 IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
 ```
 
-IPython adds a lot of additional features to the python interpreter that we used above. First, note the line numbers for inputs and outputs. Isn't it pretty?!
+IPython adds a lot of additional features to the standard python interpreter. First, note the line numbers for inputs and outputs. Isn't it pretty?!
 
 ```python
 In [1]: import math
