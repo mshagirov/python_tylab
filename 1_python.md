@@ -370,6 +370,8 @@ As mentioned above, python has built-in container datatypes [list](https://docs.
 
 > In addition to these, module [collections](https://docs.python.org/3/library/collections.html#module-collections) provides more specialised container datatypes that complement and extend these three built-in containers.
 
+### Lists
+
 We can construct lists using the square brackets `[]`, or by converting iterable object, i.e. any python object that allows iterating over it, e.g. `str`, using `list()` function (this calls the initialisation function of a list object `__init__()` and constructs a new list object from the input `iterable` object). You can access list elements by indexing them (indexing start from `0`), e.g. `a[0]` and `a[-1]` return first and last elements of a list `a`
 ```python
 In [13]: [1,2,3]                                                                
@@ -527,6 +529,50 @@ Out[56]: [-10, 1, 2, 4, 100]
 In [57]: a                                                                      
 Out[57]: [-10, 1, 2, 4, 100]
 ```
+### Tuples
+
+```python
+In [117]: t = (1,) # single element tuple
+
+In [118]: t = (1,2,3,)
+
+In [119]: t
+Out[119]: (1, 2, 3)
+
+In [122]: # tuples are not mutable/ can't modify
+
+In [123]: t[0]
+Out[123]: 1
+
+In [124]: t[0] = 0
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-124-51595a4035f3> in <module>
+----> 1 t[0] = 0
+
+TypeError: 'tuple' object does not support item assignment
+```
+
+### Dictionaries
+```python
+In [147]: # dict
+
+In [148]: d = {'a': 2}
+
+In [149]: d
+Out[149]: {'a': 2}
+
+In [150]: d['a']
+Out[150]: 2
+
+In [151]: for k in d: print(k);
+a
+
+In [152]: # loops through keys in "d"
+
+In [153]: for k in d: print(d[k]);
+2
+```
 
 ### List Comprehensions
 > More about: [list compehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions).
@@ -575,7 +621,7 @@ Out[64]:
  [2, 3]]
 ```
 
-## For Loops
+## For Loops and If Conditional Statements
 
 ```python
 In [46]: for k in l:
@@ -629,6 +675,20 @@ In [66]: for k in range(3):
 # check your indentations in for-loops
 ```
 
+
+```python
+In [10]: l = [k for k in range(10)]
+
+In [9]: if len(l)>20:
+   ...:     print('1')
+   ...: elif len(l)>30:
+   ...:     print('2')
+   ...: else:
+   ...:     print('3')
+   ...:
+3
+```
+
 ## Numpy
 ---
 > Suggestion: refer to [numpy tutorial](https://numpy.org/doc/stable/user/quickstart.html) to get an overview of `numpy`.
@@ -655,290 +715,11 @@ array([[1., 1., 1.],
        [1., 1., 1.],
        [1., 1., 1.]])
 
-In [116]: # tuples
+In [1]: from  skimage.io import imread    
+```
 
-In [117]: t = (1,) # single element tuple
-
-In [118]: (1)
-Out[118]: 1
-
-In [119]: (1,)
-Out[119]: (1,)
-
-In [120]: (1,2,3,)
-Out[120]: (1, 2, 3)
-
-In [121]: [(-1,1), (1,1), (0,1)]
-Out[121]: [(-1, 1), (1, 1), (0, 1)]
-
-In [122]: # tuples are not mutable/ can't modify
-
-In [123]: t[0]
-Out[123]: 1
-
-In [124]: t[0] = 0
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-124-51595a4035f3> in <module>
-----> 1 t[0] = 0
-
-TypeError: 'tuple' object does not support item assignment
-
-In [125]: len(t)
-Out[125]: 1
-
-In [126]: new_t = (1,2,3,'apple', 'orange')
-
-In [127]: new_t
-Out[127]: (1, 2, 3, 'apple', 'orange')
-
-In [128]: len(new_t)
-Out[128]: 5
-
-In [129]: for k in new_t: print(k);
-1
-2
-3
-apple
-orange
-
-In [130]: new_new_t = ((q,[l,m]) for q in range(5) for l in 'ab' for m in range(3))
-
-In [131]: new_new_t
-Out[131]: <generator object <genexpr> at 0x7f86951eeba0>
-
-In [132]: # need to expand generator obj: tuple(new_new_t)
-
-In [133]: tuple(new_new_t)
-Out[133]:
-((0, ['a', 0]),
- (0, ['a', 1]),
- (0, ['a', 2]),
- (0, ['b', 0]),
- (0, ['b', 1]),
- (0, ['b', 2]),
- (1, ['a', 0]),
- (1, ['a', 1]),
- (1, ['a', 2]),
- (1, ['b', 0]),
- (1, ['b', 1]),
- (1, ['b', 2]),
- (2, ['a', 0]),
- (2, ['a', 1]),
- (2, ['a', 2]),
- (2, ['b', 0]),
- (2, ['b', 1]),
- (2, ['b', 2]),
- (3, ['a', 0]),
- (3, ['a', 1]),
- (3, ['a', 2]),
- (3, ['b', 0]),
- (3, ['b', 1]),
- (3, ['b', 2]),
- (4, ['a', 0]),
- (4, ['a', 1]),
- (4, ['a', 2]),
- (4, ['b', 0]),
- (4, ['b', 1]),
- (4, ['b', 2]))
-
-In [134]: t2 = tuple(new_new_t)
-
-In [135]: t2
-Out[135]: ()
-
-In [136]: t2
-Out[136]: ()
-
-In [137]: tuple(new_new_t)
-Out[137]: ()
-
-In [138]: new_new_t = ((q,[l,m]) for q in range(5) for l in 'ab' for m in range(3))
-
-In [139]: new_new_t = tuple(new_new_t)
-
-In [140]: new_new_t
-Out[140]:
-((0, ['a', 0]),
- (0, ['a', 1]),
- (0, ['a', 2]),
- (0, ['b', 0]),
- (0, ['b', 1]),
- (0, ['b', 2]),
- (1, ['a', 0]),
- (1, ['a', 1]),
- (1, ['a', 2]),
- (1, ['b', 0]),
- (1, ['b', 1]),
- (1, ['b', 2]),
- (2, ['a', 0]),
- (2, ['a', 1]),
- (2, ['a', 2]),
- (2, ['b', 0]),
- (2, ['b', 1]),
- (2, ['b', 2]),
- (3, ['a', 0]),
- (3, ['a', 1]),
- (3, ['a', 2]),
- (3, ['b', 0]),
- (3, ['b', 1]),
- (3, ['b', 2]),
- (4, ['a', 0]),
- (4, ['a', 1]),
- (4, ['a', 2]),
- (4, ['b', 0]),
- (4, ['b', 1]),
- (4, ['b', 2]))
-
-In [141]: new_new_t[0]
-Out[141]: (0, ['a', 0])
-
-In [142]: new_new_t[0][0]
-Out[142]: 0
-
-In [143]: new_new_t[0][1]
-Out[143]: ['a', 0]
-
-In [144]: new_new_t[0][1][0]
-Out[144]: 'a'
-
-In [145]: new_new_t[0][1][0] = 'c'
-
-In [146]: new_new_t
-Out[146]:
-((0, ['c', 0]),
- (0, ['a', 1]),
- (0, ['a', 2]),
- (0, ['b', 0]),
- (0, ['b', 1]),
- (0, ['b', 2]),
- (1, ['a', 0]),
- (1, ['a', 1]),
- (1, ['a', 2]),
- (1, ['b', 0]),
- (1, ['b', 1]),
- (1, ['b', 2]),
- (2, ['a', 0]),
- (2, ['a', 1]),
- (2, ['a', 2]),
- (2, ['b', 0]),
- (2, ['b', 1]),
- (2, ['b', 2]),
- (3, ['a', 0]),
- (3, ['a', 1]),
- (3, ['a', 2]),
- (3, ['b', 0]),
- (3, ['b', 1]),
- (3, ['b', 2]),
- (4, ['a', 0]),
- (4, ['a', 1]),
- (4, ['a', 2]),
- (4, ['b', 0]),
- (4, ['b', 1]),
- (4, ['b', 2]))
-
-In [147]: # dict
-
-In [148]: d = {'a': 2}
-
-In [149]: d
-Out[149]: {'a': 2}
-
-In [150]: d['a']
-Out[150]: 2
-
-In [151]: for k in d: print(k);
-a
-
-In [152]: # loops through keys in "d"
-
-In [153]: for k in d: print(d[k]);
-2
-
-In [154]: # another indexing for lists and tuples
-
-In [155]: l
-Out[155]: [-10, 1, 2, 4, 5, 6, 7, 8, 9, 100, 1, 2, 3, [1, 2, 3]]
-
-In [156]: l[-1]
-Out[156]: [1, 2, 3]
-
-In [157]: l[-2]
-Out[157]: 3
-
-In [158]: # slicing
-
-In [159]: l[:5]
-Out[159]: [-10, 1, 2, 4, 5]
-
-In [160]: l[5:]
-Out[160]: [6, 7, 8, 9, 100, 1, 2, 3, [1, 2, 3]]
-
-In [161]: exit()
-➜  ~
-➜  ~
-➜  ~ import skimage.io
-zsh: command not found: import
-➜  ~ ipython
-Python 3.6.9 |Anaconda, Inc.| (default, Jul 30 2019, 13:42:17)
-Type 'copyright', 'credits' or 'license' for more information
-IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
-
-In [1]: import skimage.io.imread as imread
----------------------------------------------------------------------------
-ModuleNotFoundError                       Traceback (most recent call last)
-<ipython-input-1-618de0991a09> in <module>
-----> 1 import skimage.io.imread as imread
-
-ModuleNotFoundError: No module named 'skimage.io.imread'
-
-In [2]: from  skimage.io import imread
-
-In [3]: imread?
-
-In [4]: # if , elif, else
-
-In [5]: if len(l)>100:
-   ...:     print('1')
-   ...: elif len(l)>1000:
-   ...:     print('2)
-  File "<ipython-input-5-892a7dc63519>", line 4
-    print('2)
-             ^
-SyntaxError: EOL while scanning string literal
-
-
-In [6]: if len(l)>100:
-   ...:     print('1')
-   ...: elif len(l)>1000:
-   ...:     print('2')
-   ...: else:
-   ...:     print('3')
-   ...:
----------------------------------------------------------------------------
-NameError                                 Traceback (most recent call last)
-<ipython-input-6-c06d6095ec86> in <module>
-----> 1 if len(l)>100:
-      2     print('1')
-      3 elif len(l)>1000:
-      4     print('2')
-      5 else:
-
-NameError: name 'l' is not defined
-
-In [7]: l = [k for k in range(10)]
-
-In [8]: l
-Out[8]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-In [9]: if len(l)>20:
-   ...:     print('1')
-   ...: elif len(l)>30:
-   ...:     print('2')
-   ...: else:
-   ...:     print('3')
-   ...:
-3
-
-In [10]: exit()      
+## Closing Python Interpreter and IPython Shell
+Use `exit()` or <kbd>Ctrl</kbd> + <kbd>D</kbd>.
+```python
+exit()
 ```
