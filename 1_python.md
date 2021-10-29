@@ -254,7 +254,7 @@ You can access all these attributes. Let's use `__float__` and `__eq__` methods 
 >>> x.__eq__(3)  # same as `x == 3`
 False
 ```
-In fact, these methods are used when we are operating on our object `x` (e.g. `x == 3` uses `x.__eq__()`). When can also list attributes of classes as well as objects (in python functions are objects as well), e.g. here for `str` class.
+In fact, these methods are used when we are operating on our object `x` (e.g. `x == 3` uses `x.__eq__()`). We can also list attributes of classes as well as objects (in python functions are objects as well), e.g. here for `str` class.
 
 ```python
 >>> dir(str)
