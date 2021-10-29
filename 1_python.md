@@ -410,6 +410,15 @@ In [23]: l = list(range(10))
 
 In [24]: l                                                                      
 Out[24]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [25]: l[0]
+Out[25]: 0
+
+In [26]: l[1] + 1
+Out[26]: 2
+
+In [27]: l                                                                      
+Out[27]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 Note that we get an error message when we try to access fourth element `l[3]` (that does not exist) in a list with only three elements.
 
@@ -417,44 +426,158 @@ Note that we get an error message when we try to access fourth element `l[3]` (t
 
 > Tip 2: you can create number sequences using `range()` and `list()`/`tuple()`.
 
-NumPy tutorial https://numpy.org/doc/stable/user/quickstart.html
+### Changing List Elements, and Slicing
+You can change one element in a list by assigning new value to a element in the list, e.g. `l[3] = -10`, or a set of elements by slicing the list, e.g. `l[-2:] =  [0,0,0]`
+```python
+In [27]: l[3] = -10                                                             
+
+In [28]: l                                                                      
+Out[28]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9]
+
+In [29]: l[-3:] = [0,0,0]  # assigning an iterable with same length as the slice
+
+In [30]: l                                                                      
+Out[30]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0]
+```
+
+### Appending to and Extending Lists, `pop()`, `del`, and `copy()`
+```python
+In [31]: l.append('abc')                                                        
+
+In [32]: l.append(math.e)                                                       
+
+In [33]: l                                                                      
+Out[33]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0, 'abc', 2.718281828459045]
+
+In [34]: len(l)                                                                 
+Out[34]: 12
+
+In [35]: l.pop()  # pop the last element                                                        
+Out[35]: 2.718281828459045
+
+In [36]: l.pop()  # pop the last element                                                             
+Out[36]: 'abc'
+
+In [37]: len(l)                                                                 
+Out[37]: 10
+
+In [38]: l                                                                      
+Out[38]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9]
+
+In [39]: l.extend(['abc'])  # extend `l` with `['abc']`                                                   
+
+In [40]: l.extend('abc')  # input can be any iterable, e.g. `str` object                                                  
+
+In [41]: l                                                                      
+Out[41]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0, 'abc', 'a', 'b', 'c']
+
+In [42]: l.extend(range(2))                                                 
+
+In [43]: l                                                                      
+Out[43]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0, 'abc', 'a', 'b', 'c', 0, 1]
+```
+
+Let's use `del` function to delete last two element of list `l`.
+```python
+In [44]: del l[5:]  # delete all elem-s starting with and including index `5`
+
+In [45]: l                                                                      
+Out[45]: [0, 1, 2, -10, 4]
+```
+
+---
+You can use `del` to delete all elements in the list, e.g. `del l[:]`, or delete the variable `l` (whole list)
+```python
+del l  # deletes variable `l`
+```
+
+---
+
+Assigning lists to a new variable name does not create a new list. If two variables are the same list object, changing one will change the other. To avoid assigning the same object to the new name, use `copy()` (see also [deepcopy](https://docs.python.org/3/library/copy.html)).
+```python
+In [46]: a = l  # now var "a" points to var "l"
+
+In [47]: a is l  # a and l are the same object
+Out[47]: True
+
+In [48]: b = l.copy()  # copy list elements to a new list
+
+In [49]: b is l  # b and l are different objects
+Out[49]: False
+
+In [50]: b == l  # b and l elements are equal to each other
+Out[50]: True
+
+In [51]: a[0]=100  # modifying "l" modifies "a"
+
+In [52]: a
+Out[52]: [100, 1, 2, -10, 4]
+
+In [53]: l                                                                      
+Out[53]: [100, 1, 2, -10, 4]
+
+In [54]: b
+Out[54]: [0, 1, 2, -10, 4]
+
+In [55]: l.sort()  # changes l and a
+
+In [56]: l                                                                      
+Out[56]: [-10, 1, 2, 4, 100]
+
+In [57]: a                                                                      
+Out[57]: [-10, 1, 2, 4, 100]
+```
+
+### List Comprehensions
+> More about: [list compehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions).
 
 ```python
-In [24]: np.ones(10)
-Out[24]: array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
+In [58]: l = [k for k in range(10)]
 
-In [25]: type(np.ones(10))
-Out[25]: numpy.ndarray
+In [59]: l
+Out[59]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-In [26]: np.ones((10,3))
-Out[26]:
-array([[1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.]])
+In [60]: [k for k in 'abcde']
+Out[60]: ['a', 'b', 'c', 'd', 'e']
 
-In [29]: # lists, tuples, dicts
+In [61]: # list of lists
 
-In [32]: help(np.ones)
+In [62]: [(k,m) for k in range(3) for m in range(4)]
+Out[62]:
+[(0, 0),
+ (0, 1),
+ (0, 2),
+ (0, 3),
+ (1, 0),
+ (1, 1),
+ (1, 2),
+ (1, 3),
+ (2, 0),
+ (2, 1),
+ (2, 2),
+ (2, 3)]
 
+In [63]: # nested list comprehensions
 
-In [33]: np.ones?
+In [64]: [[k,m] for k in range(3) for m in range(4)]
+Out[64]:
+[[0, 0],
+ [0, 1],
+ [0, 2],
+ [0, 3],
+ [1, 0],
+ [1, 1],
+ [1, 2],
+ [1, 3],
+ [2, 0],
+ [2, 1],
+ [2, 2],
+ [2, 3]]
+```
 
-In [44]: # for loop
+## For Loops
 
-In [45]: for k in l:
-    ...:     print(l)
-    ...:
-[1, 2, 3]
-[1, 2, 3]
-[1, 2, 3]
-
+```python
 In [46]: for k in l:
     ...:     print(k)
     ...:
@@ -484,55 +607,6 @@ b
 c
 d
 
-In [55]: len('abc')
-Out[55]: 3
-
-In [56]: # python expression
-
-In [57]: # lists
-
-In [58]: l = [k for k in range(10)]
-
-In [59]: l
-Out[59]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-In [60]: [k for k in 'abcde']
-Out[60]: ['a', 'b', 'c', 'd', 'e']
-
-In [61]: # list of lists
-
-In [62]: [(k,m) for k in range(3) for m in range(4)]
-Out[62]:
-[(0, 0),
- (0, 1),
- (0, 2),
- (0, 3),
- (1, 0),
- (1, 1),
- (1, 2),
- (1, 3),
- (2, 0),
- (2, 1),
- (2, 2),
- (2, 3)]
-
-In [63]: # nested for loop
-
-In [64]: [[k,m] for k in range(3) for m in range(4)]
-Out[64]:
-[[0, 0],
- [0, 1],
- [0, 2],
- [0, 3],
- [1, 0],
- [1, 1],
- [1, 2],
- [1, 3],
- [2, 0],
- [2, 1],
- [2, 2],
- [2, 3]]
-
 In [65]: # nested for loop
 
 In [66]: for k in range(3):
@@ -552,146 +626,34 @@ In [66]: for k in range(3):
 [2, 2]
 [2, 3]
 
-In [67]: # check your indentation for for-loops
+# check your indentations in for-loops
+```
 
-In [68]: l
-Out[68]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+## Numpy
+---
+> Suggestion: refer to [numpy tutorial](https://numpy.org/doc/stable/user/quickstart.html) to get an overview of `numpy`.
 
-In [69]: l[0]
-Out[69]: 0
+---
 
-In [70]: l[1] + 1
-Out[70]: 2
+```python
+In [24]: np.ones(10)
+Out[24]: array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
 
-In [71]: # modify list elem-s
+In [25]: type(np.ones(10))
+Out[25]: numpy.ndarray
 
-In [72]: l[3] = -10
-
-In [73]: l
-Out[73]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9]
-
-In [74]: # appending elem-s to list
-
-In [75]: l.append('abc')
-
-In [76]: l.append(math.e)
-
-In [77]: l
-Out[77]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9, 'abc', 2.718281828459045]
-
-In [78]: len(l)
-Out[78]: 12
-
-In [79]: list?
-Init signature: list(self, /, *args, **kwargs)
-Docstring:
-list() -> new empty list
-list(iterable) -> new list initialized from iterable's items
-Type:           type
-Subclasses:     _HashedSeq, StackSummary, SList, List, List, List, List, _ImmutableLineList, FormattedText, NodeList, ...
-
-In [80]: l.pop()
-Out[80]: 2.718281828459045
-
-In [81]: l
-Out[81]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9, 'abc']
-
-In [82]: len(l)
-Out[82]: 11
-
-In [83]: l.pop()
-Out[83]: 'abc'
-
-In [84]: len(l)
-Out[84]: 10
-
-In [85]: l
-Out[85]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9]
-
-In [86]: a = l
-
-In [87]: # now var "a" points to var "l"
-
-In [88]: a == l
-Out[88]: True
-
-In [89]: a = l.copy()
-
-In [90]: a == l
-Out[90]: True
-
-In [91]: a is ll
----------------------------------------------------------------------------
-NameError                                 Traceback (most recent call last)
-<ipython-input-91-f1b42bb5e372> in <module>
-----> 1 a is ll
-
-NameError: name 'll' is not defined
-
-In [92]: a is l
-Out[92]: False
-
-In [93]: a = l
-
-In [94]: a is l
-Out[94]: True
-
-In [95]: b = l.copy() # b will be at new mem-y loc-n
-
-In [96]: b is l
-Out[96]: False
-
-In [97]: b is a
-Out[97]: False
-
-In [98]: a
-Out[98]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9]
-
-In [99]: # modifying "l" modifies "a"
-
-In [100]: a[0]=100
-
-In [101]: a
-Out[101]: [100, 1, 2, -10, 4, 5, 6, 7, 8, 9]
-
-In [102]: l
-Out[102]: [100, 1, 2, -10, 4, 5, 6, 7, 8, 9]
-
-In [103]: a is l
-Out[103]: True
-
-In [104]: b
-Out[104]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9]
-
-In [105]: l.sort()
-
-In [106]: # notice no output
-
-In [107]: # "l" sorted
-
-In [108]: l
-Out[108]: [-10, 1, 2, 4, 5, 6, 7, 8, 9, 100]
-
-In [109]: l.clear?
-Docstring: L.clear() -> None -- remove all items from L
-Type:      builtin_function_or_method
-
-In [110]: l.extend?
-Docstring: L.extend(iterable) -> None -- extend list by appending elements from the iterable
-Type:      builtin_function_or_method
-
-In [111]: print(l)
-[-10, 1, 2, 4, 5, 6, 7, 8, 9, 100]
-
-In [112]: l.extend([1,2,3])
-
-In [113]: print(l)
-[-10, 1, 2, 4, 5, 6, 7, 8, 9, 100, 1, 2, 3]
-
-In [114]: l.append([1,2,3])
-
-In [115]: print(l)
-[-10, 1, 2, 4, 5, 6, 7, 8, 9, 100, 1, 2, 3, [1, 2, 3]]
+In [26]: np.ones((10,3))
+Out[26]:
+array([[1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.]])
 
 In [116]: # tuples
 
