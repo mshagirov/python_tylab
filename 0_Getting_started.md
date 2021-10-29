@@ -77,7 +77,9 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
   ```
   which python
   ```
-  location for the new installation of python in `anaconda3` directory, e.g. for python it should print `/Users/USER/anaconda3/bin/python` where `USER` is your user name. You can check your user name by entering `echo $USER` in terminal.
+  location for the new installation of python in `anaconda3` directory, e.g. for python it should print `/Users/USER/anaconda3/bin/python` where `USER` is your user name. You can check your user name by entering `echo $USER` in terminal. If you set up your `path` variable correctly, but still facing errors (e.g. `which` or `where` can not locate your `conda`/`python`):
+- \[Mac OS\] Installing `xcode`, then close and re-open your terminal and try checking again (this should install command line tools for Mac OS)
+- \[Windows\] Probably your `path` is not set up properly, instead you can use `Anaconda prompt`. You can find it on start menu by typing "anaconda" in the search bar.
 
 ## 4. Run Python and Jupyter Notebook. 
 In terminal (or `cmd` command shell on Windows), enter one of these
