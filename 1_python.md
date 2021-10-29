@@ -479,7 +479,7 @@ In [43]: l
 Out[43]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0, 'abc', 'a', 'b', 'c', 0, 1]
 ```
 
-Let's use `del` function to delete last two elements in `l`.
+Let's use `del` function to delete all elements starting with index `5` to the last element in `l`.
 ```python
 In [44]: del l[5:]  # delete all elem-s starting with and including index `5`
 
