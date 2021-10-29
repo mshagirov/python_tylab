@@ -208,7 +208,7 @@ abc
 	def
 ```
 
-where `\n`, and `\t` are the new line and tab characters respectively, and note that when we can set the last character to print with `end=` keyword argument (`end=''` prints an empty string, default is `end='\n'`). If we want to ignore special characters like `\t` and `\n` and print them literally, we can use `raw` string
+where `\n`, and `\t` are the new line and tab characters respectively, and note how we set the last character to print with `end=` keyword argument (`end=''` prints an empty string, default is `end='\n'`). If we want to ignore special characters like `\t` and `\n` and print them literally, we can use `raw` string
 
 ```python
 >>> r'abc\ndef'  # raw string; note how it adds a skip character `\`
