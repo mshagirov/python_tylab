@@ -79,8 +79,16 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
   ```
   location for the new installation of python in `anaconda3` directory, e.g. for python it should print `/Users/USER/anaconda3/bin/python` where `USER` is your user name. You can check your user name by entering `echo $USER` in terminal.
 
-## 4. Run Jupyter Notebook. 
-In terminal (or `cmd` command shell on Windows), enter
+## 4. Run Python and Jupyter Notebook. 
+In terminal (or `cmd` command shell on Windows), enter one of these
+```
+python
+```
+or
+```
+ipython
+```
+this should start `python`/`ipython` interpreter. To exit use `exit()` command or press <kbd>Ctrl</kbd> + <kbd>D</kbd>. Next, to check jupyter enter
 ```
 jupyter notebook
 ```
