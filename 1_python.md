@@ -7,7 +7,7 @@ Before we start using python in the jupyter environment (`jupyter-lab` or `jupyt
 ---
 \[**Mac OS**\] You can use the default "Terminal" application with `zsh` shell.
 
-\[**Windows**\] There are many terminals available on windows OS. You can use `cmd.exe` as your command line interface, but as a default I suggest using `windows terminal`. You can install [windows terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) from the official app store, and install `git bash` (e.g. you can install [git for windows](https://gitforwindows.org), which comes with its own `git bash`). For earlier `Win OS` versions, please try to install the windows terminal, if it is available. As an alternative, you can directly use `git bash` shell. As a added bonus, we will hopefully use `git` in the future, but for now let us just enjoy the bash shell.
+\[**Windows**\] There are many terminals available on windows OS. You can use `cmd.exe` as your command line interface, but as a default I suggest using `windows terminal`. You can install [windows terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) from the official app store, and install `git bash` (e.g. you can install [git for windows](https://gitforwindows.org), which comes with its own `git bash`). For earlier `Win OS` versions, please try to install the windows terminal, if it is available. As an alternative, you can directly use `git bash` shell. As an added bonus, we will hopefully use `git` in the future, but for now let us just enjoy the bash shell.
 
 ---
 
