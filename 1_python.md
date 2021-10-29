@@ -411,7 +411,7 @@ In [23]: l = list(range(10))
 In [24]: l                                                                      
 Out[24]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-Note how when get an error message when we try to access fourth element `l[3]` of a list with only three elements.
+Note that we get an error message when we try to access fourth element `l[3]` (that does not exist) in a list with only three elements.
 
 > Tip 1: use `len()` to check number of elements in container objects.
 
