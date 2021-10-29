@@ -372,7 +372,7 @@ As mentioned above, python has built-in container datatypes [list](https://docs.
 
 ### Lists
 
-We can construct lists using the square brackets `[]`, or by converting iterable object, i.e. any python object that allows iterating over it, e.g. `str`, using `list()` function (this calls the initialisation function of a list object `__init__()` and constructs a new list object from the input `iterable` object). You can access list elements by indexing them (indexing start from `0`), e.g. `a[0]` and `a[-1]` return first and last elements of a list `a`
+We can construct lists using the square brackets `[]`, or by converting iterable object, i.e. any python object that allows iterating over it, e.g. `str`, using `list()` function (this calls the initialisation function of a list object `__init__()` and constructs a new list object from the input `iterable` object). You can access list elements by indexing them (indexing starts from `0`), e.g. `a[0]` and `a[-1]` return first and last elements of a list `a`
 ```python
 In [13]: [1,2,3]                                                                
 Out[13]: [1, 2, 3]
