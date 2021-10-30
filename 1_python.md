@@ -369,7 +369,7 @@ Subclasses:     _HashedSeq, StackSummary, SList, List, List, List, List, _Immuta
 
 In [12]: np.ones?
 ```
-But joking aside, this will come very handy when you are writing your own code in IPython and Jupyter.
+But joking aside, this will come in handy when you are writing your own code in IPython and Jupyter and want to quickly lookup help for functions.
 
 >Reminder : use <kbd>Q</kbd> to close the help window.
 
