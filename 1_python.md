@@ -278,7 +278,7 @@ Another very useful function for understanding objects is `help()`. `help()` wil
 
 > Tip : For long documentation `help()` opens a separate "window", which you can close by pressing <kbd>Q</kbd> after you finish reading it.
 
-> As a practice exercise, use `dir` and `help` to learn about `str.format()` and use methods in `str` type objects.
+> As a practice exercise, use `dir` and `help` to learn about `str.format()`, other objects, and their methods and attributes.
 E.g. create a string and use `dir` to explore it, then open help for `str.format()` for your string
 (e.g. `"".format()`, here the first part `""` returns a new string).
 
