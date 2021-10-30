@@ -309,7 +309,7 @@ d
 4
 ```
 
-> Tip : if you accidentally running an infinite `while` loop or long and computationally intensive
+> Tip : if you accidentally run an infinite `while` loop or a long and computationally intensive
 `for` loop and want to cancel your command, use <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel and exit the loop.
 
 ```python
