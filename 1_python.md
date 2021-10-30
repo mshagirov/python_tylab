@@ -294,7 +294,7 @@ In terminal, enter
 ipython
 ```
 
-This starts IPython shell, where you should see following message.
+This starts IPython shell, where you should see a message similar to the one shown below.
 
 ```python
 Python 3.6.9 |Anaconda, Inc.| (default, Jul 30 2019, 13:42:17)
