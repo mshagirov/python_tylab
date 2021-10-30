@@ -5,7 +5,7 @@
 Before we start using python in the jupyter environment (`jupyter-lab` or `jupyter-notebook`), let us get some grounding in python and experience a clean and simple python interpreter through terminal. Open your favourite terminal program with bash-like shell with `Unix` commands.
 
 ---
-\[**Mac OS**\] You can use the default "Terminal" application with `zsh` shell.
+\[**Mac OS** \] You can use the default "Terminal" application with `zsh` shell.
 
 \[**Windows**\] There are many terminals available on windows OS. You can use `cmd.exe` as your command line interface, but as a default I suggest using `windows terminal`. You can install [windows terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) from the official app store, and install `git bash` (e.g. you can install [git for windows](https://gitforwindows.org), which comes with its own `git bash`). For earlier `Win OS` versions, please try to install the windows terminal, if it is available. As an alternative, you can directly use `git bash` shell. As an added bonus, we will hopefully use `git` in the future, but for now let us just enjoy the bash shell.
 
@@ -271,11 +271,21 @@ In fact, these methods are used when we are operating on our object `x` (e.g. `x
 Another very useful function for understanding objects is `help()`. `help()` will open the documentation if it is available (special comments section of the class, or function)
 
 ```python
+>>> help(math.ceil)  # press Q to close help
 >>> help(x)
->>> help(math.ceil)
 >>> help(str)
 ```
-For long documentation `help()` opens a window which you can close by pressing <kbd>Q</kbd> after you finish reading it.
+
+> Tip : For long documentation `help()` opens a separate "window", which you can close by pressing <kbd>Q</kbd> after you finish reading it.
+
+> As a practice exercise, use `dir` and `help` to learn about `str.format()` and use methods in `str` type objects.
+E.g. create a string and use `dir` to explore it, then open help for `str.format()` for your string
+(e.g. `"".format()`, here the first part `""` returns a new string).
+
+After you are done practicing, you can close python interpreter by entering
+```python
+>>> exit()
+```
 
 ## IPython- Interactive Python Shell and Kernel for Jupyter
 In terminal, enter
