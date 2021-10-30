@@ -339,15 +339,14 @@ nested for loop
 
 ### Conditional Statements
 ```python
-In [10]: l = [k for k in range(10)]
-
-In [9]: if len(l)>20:
-   ...:     print('1')
-   ...: elif len(l)>30:
-   ...:     print('2')
-   ...: else:
-   ...:     print('3')
-   ...:
+>>> s = 'Hello, world!'
+>>> if len(s)>20:
+...     print('1')
+... elif len(l)>15:
+...     print('2')
+... else:
+...     print('3')
+...
 3
 ```
 
