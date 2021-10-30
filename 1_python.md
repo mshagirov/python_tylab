@@ -282,10 +282,83 @@ Another very useful function for understanding objects is `help()`. `help()` wil
 E.g. create a string and use `dir` to explore it, then open help for `str.format()` for your string
 (e.g. `"".format()`, here the first part `""` returns a new string).
 
+## For and While Loops
+
+```python
+>>> for k in 'abcd':
+...     print(k)  # indented line; preferably use spaces
+...
+a
+b
+c
+d
+>>> for k in range(3):
+...     print(k)
+...
+0
+1
+2
+>>> while k<4:  # "k<4" part should evaluate to `bool` True/False
+...     # do something here
+...     k+=1  # this will make sure that we don't get an infinite loop
+...     print(k)
+...
+1
+2
+3
+4
+```
+
+> Tip : if you accidentally running an infinite `while` loop or long and computationally intensive
+`for` loop and want to cancel your command, use <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel and exit the loop.
+
+```python
+>>> s = 'abcd'
+>>> for k in range(len(s)):
+...     print(k,':', s[k])
+...
+0 : a
+1 : b
+2 : c
+3 : d
+```
+
+nested for loop
+```python
+>>> for k in range(3):
+...     for m in range(2):
+...             print([k,m]) # check your indentations in code blocks
+...
+[0, 0]
+[0, 1]
+[1, 0]
+[1, 1]
+[2, 0]
+[2, 1]
+```
+
+### Conditional Statements
+```python
+In [10]: l = [k for k in range(10)]
+
+In [9]: if len(l)>20:
+   ...:     print('1')
+   ...: elif len(l)>30:
+   ...:     print('2')
+   ...: else:
+   ...:     print('3')
+   ...:
+3
+```
+
+---
+
 After you are done practicing, you can close python interpreter by entering
 ```python
 >>> exit()
 ```
+
+---
 
 ## IPython- Interactive Python Shell and Kernel for Jupyter
 In terminal, enter
@@ -630,74 +703,6 @@ Out[64]:
  [2, 1],
  [2, 2],
  [2, 3]]
-```
-
-## For Loops and If Conditional Statements
-
-```python
-In [46]: for k in l:
-    ...:     print(k)
-    ...:
-1
-2
-3
-
-In [49]: for k in range(10):
-    ...:     print(k)
-    ...:
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-
-In [54]: for k in 'abcd':
-    ...:     print(k)
-    ...:
-a
-b
-c
-d
-
-In [65]: # nested for loop
-
-In [66]: for k in range(3):
-    ...:     for m in range(4):
-    ...:         print([k,m])
-    ...:
-[0, 0]
-[0, 1]
-[0, 2]
-[0, 3]
-[1, 0]
-[1, 1]
-[1, 2]
-[1, 3]
-[2, 0]
-[2, 1]
-[2, 2]
-[2, 3]
-
-# check your indentations in for-loops
-```
-
-
-```python
-In [10]: l = [k for k in range(10)]
-
-In [9]: if len(l)>20:
-   ...:     print('1')
-   ...: elif len(l)>30:
-   ...:     print('2')
-   ...: else:
-   ...:     print('3')
-   ...:
-3
 ```
 
 ## Numpy
