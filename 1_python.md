@@ -528,7 +528,7 @@ Note that we get an error message when we try to access fourth element `l[3]` (t
 
 > ***Tip 2***: you can create number sequences using `range()` and `list()`/`tuple()`.
 
-> ***Warning***: Using letters `l`, `I`, and `O` can be confusing, e.g. l can be misread as I, and
+> ***Warning***: Using letters `l`, `I`, and `O` can be confusing, e.g. `l` can be misread as `I`, and
 is a bad practice that is frowned upon.
 
 ### Changing List Elements, and Slicing
