@@ -7,14 +7,15 @@ Before we start using python in Jupyter environment (`jupyter-lab` or `jupyter-n
 ---
 **Bash-like Shells**
 
-\[**Unix Commands**\] For a list of commonly used unix commands— special unix programs, please refer to [this link](http://mally.stanford.edu/~sr/computing/basic-unix.html). The most commonly used of these are `man`, `ls`, `cd`, `pwd`, `mkdir`, `cat`, and `less`. If you want to learn or remind yourself on how to use any of these and other unix commands use `man` to lookup manpages of programs (`man command_name`), e.g. try
+> \[***Unix Commands***\] For a list of commonly used unix commands— special unix programs, please refer to [this link](http://mally.stanford.edu/~sr/computing/basic-unix.html). The most commonly used of these are `man`, `ls`, `cd`, `pwd`, `mkdir`, `cat`, and `less`. If you want to learn or remind yourself on how to use any of these and other unix commands use `man` to lookup manpages of programs (`man command_name`), e.g. try
+
 ```
 man ls
 ```
 
-\[**Mac OS** \] You can use the default "Terminal" application with `zsh` shell.
+> \[***Mac OS*** \] You can use the default "Terminal" application with `zsh` shell.
 
-\[**Windows**\] There are many terminals available on windows OS. You can use `cmd.exe` as your command line interface, but as a default I suggest using `windows terminal`. You can install [windows terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) from the official app store, and install `git bash` (e.g. you can install [git for windows](https://gitforwindows.org), which comes with its own `git bash`). For earlier `Win OS` versions, please try to install the windows terminal, if it is available. As an alternative, you can directly use `git bash` shell. As an added bonus, we will hopefully use `git` in the future, but for now let us just enjoy the bash shell.
+> \[***Windows***\] There are many terminals available on windows OS. You can use `cmd.exe` as your command line interface, but as a default I suggest using `windows terminal`. You can install [windows terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) from the official app store, and install `git bash` (e.g. you can install [git for windows](https://gitforwindows.org), which comes with its own `git bash`). For earlier `Win OS` versions, please try to install the windows terminal, if it is available. As an alternative, you can directly use `git bash` shell. As an added bonus, we will hopefully use `git` in the future, but for now let us just enjoy the bash shell.
 
 ---
 
