@@ -11,8 +11,9 @@ Install Anaconda individual edition.
 - \[***Suggested***\] Use default installation/destination directory when installing anaconda.
 - \[***Suggested***\] When asked, select "add Anaconda to your PATH" option.
 - \[***Beginners***\] Users unfamiliar with environment variables or command-line interface, optionally
-                      can skip steps **2** and **3** below and use `Anaconda Navigator` to start JupyterLab, or Spyder.
-                      All codes presented in next session will run in both JupyterLab, and Spyder.
+                      can skip steps **2** and **3** below and use `Anaconda Navigator` to start
+                      `Anaconda prompt`, `JupyterLab`, or `Spyder`. All codes presented in next session will
+                      run in both JupyterLab, and Spyder.
 
 ## 2. `Path` environment variable
 **If you already added `anaconda` to the path variable, skip to the next step ["Check your installation"](#3-check-your-anaconda-installation)**.
@@ -84,7 +85,7 @@ Starting with Catalina, macOS uses [zsh as the default shell](https://support.ap
   which python
   ```
   location for the new installation of python in `anaconda3` directory, e.g. for python it should print `/Users/USER/anaconda3/bin/python` where `USER` is your user name. You can check your user name by entering `echo $USER` in terminal. If you set up your `path` variable correctly, but still facing errors (e.g. `which` or `where` can not locate your `conda`/`python`):
-- \[***Mac OS*** \] Try installing `xcode`, then close and re-open your terminal and try checking again (this should install command line tools for Mac OS)
+- \[***Mac OS*** \] Close and re-open your terminal application. If it does not work, try installing `xcode` (installs command line tools for Mac OS) then close and re-open your terminal and try checking your `conda` installation again.
 - \[***Windows***\] Probably your `path` is not set up properly, instead you can use `Anaconda prompt`. You can find it on start menu by typing "anaconda" in the search bar.
 
 ## 4. Run Python and Jupyter Notebook.
