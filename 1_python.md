@@ -7,7 +7,7 @@ Before we start using python in Jupyter environment (`jupyter-lab` or `jupyter-n
 ---
 **Bash-like Shells**
 
-\[**Basic Unix Commands**\] For a list of commonly used unix commands— special unix programs, please refer to [this link](http://mally.stanford.edu/~sr/computing/basic-unix.html). Most commonly used of these are `man`, `ls`, `cd`, `pwd`, `mkdir`, `cat`, and `less`. If you want to learn or remind yourself on how to use any of these and other unix commands use `man` to lookup manpages of programs (`man command_name`), e.g. try
+\[**Unix Commands**\] For a list of commonly used unix commands— special unix programs, please refer to [this link](http://mally.stanford.edu/~sr/computing/basic-unix.html). Most commonly used of these are `man`, `ls`, `cd`, `pwd`, `mkdir`, `cat`, and `less`. If you want to learn or remind yourself on how to use any of these and other unix commands use `man` to lookup manpages of programs (`man command_name`), e.g. try
 ```
 man ls
 ```
