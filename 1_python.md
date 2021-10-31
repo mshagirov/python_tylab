@@ -146,7 +146,7 @@ Built-in functions also include basic mathematical operations, here are some of 
 ```
 
 ## Importing Modules
-Standard mathematical operations we used above could be limiting for certain applications. For this reason, python comes with [`math`](https://docs.python.org/3/library/math.html) module, which includes functions such as `exp()`, `log()`, trigonometric functions and more. While we are at it let us also learn importing external python modules with keyword: `import`.
+Standard mathematical operations we used above could be limiting for certain applications. For this reason, python comes with [`math`](https://docs.python.org/3/library/math.html) module, which includes functions such as `exp()`, `log()`, trigonometric functions and more. While we are at it let us also learn importing external python modules with [`import`](https://docs.python.org/3/glossary.html#term-import-path) keyword.
 
 
 ```python
@@ -651,28 +651,44 @@ In [57]: a
 Out[57]: [-10, 1, 2, 4, 100]
 ```
 ### Tuples
+Tuples are another standard sequences data type in python similar to strings and lists. Compared with lists, tuples
+and strings are [immutable](https://docs.python.org/3/glossary.html#term-immutable), but same as lists their elements
+can be accessed by indexing and slicing. You can create tuples using brackets `()`, or by assigning a number of values
+separated by commas to a single variable.
 
 ```python
-In [117]: t = (1,) # single element tuple
+In [58]: t = ()  # an empty tuple                                               
 
-In [118]: t = (1,2,3,)
+In [59]: t2 = ('abc', )  # tuple with one element                               
 
-In [119]: t
-Out[119]: (1, 2, 3)
+In [60]: t3 = 1, 2 , t2  # tuple packing; heterogenous sequence                   
 
-In [122]: # tuples are not mutable/ can't modify
+In [61]: print(f't: {t}/nt2: {t2}/nt3: {t3}')  # print variables
+t: ()
+t2: ('abc',)
+t3: (1, 2, ('abc',))
 
-In [123]: t[0]
-Out[123]: 1
+In [62]: t3[-2]                                                                 
+Out[62]: 2
 
-In [124]: t[0] = 0
+In [63]: t[0] = 0   # tuples are immutable and can't be changed
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
-<ipython-input-124-51595a4035f3> in <module>
+<ipython-input-63-51595a4035f3> in <module>
 ----> 1 t[0] = 0
 
 TypeError: 'tuple' object does not support item assignment
 ```
+
+---
+
+> ***Tuple Unpacking***: Tuple unpacking is a common way to assign values to multiple variables, e.g.
+
+```python
+>>> x, y, z = 1 , 2, 'abc'  # equivalent to ` x, y, z = (1 , 2, 'abc') `
+```
+
+---
 
 ### Dictionaries
 ```python
