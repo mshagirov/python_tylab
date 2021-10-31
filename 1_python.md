@@ -332,10 +332,12 @@ d
 3 : d
 ```
 
-nested for loop
+nested for loops
 ```python
 >>> for k in range(3):
+...     # outer for loop
 ...     for m in range(2):
+...             # inner for loop
 ...             print([k,m]) # check your indentations in code blocks
 ...
 [0, 0]
@@ -360,6 +362,10 @@ nested for loop
 ```
 
 ---
+> ***Exercise*** : For all integers `n` in range \[0, 50\], depending on whether `n` is
+an even or an odd number, on a new line print integer `n` itself (i.e. once) if it
+is even, or if it is an odd number print `n` `n` number of times on a single line.
+E.g. for 2 print line `2` and for 3 print line `3 3 3`.
 
 After you are done practicing, you can close python interpreter by entering
 ```python
