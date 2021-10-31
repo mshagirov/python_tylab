@@ -532,7 +532,7 @@ Note that we get an error message when we try to access fourth element `l[3]` (t
 is a practice that is frowned upon.
 
 ### Changing List Elements, and Slicing
-You can change one element in a list by assigning new value to an element in the list, e.g. `l[3] = -10`, or a set of elements by slicing the list, e.g. `l[-2:] =  [0,0,0]`
+You can change one element in a list by assigning new value to an element in the list, e.g. `l[3] = -10`, or a set of elements by slicing the list, e.g. `l[-2:]`
 ```python
 In [27]: l[3] = -10                                                             
 
