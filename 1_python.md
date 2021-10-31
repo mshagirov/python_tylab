@@ -550,10 +550,10 @@ x=1; y=2; z=ab; L1=1; Lrest=[2, 'ab']
 ### Changing List Elements, and Slicing
 You can access and change one element in a list by assigning new value to an element in the list, or a set of elements by slicing the list
 ```python
-In [27]: l[3] = -10                                                             
+In [27]: l[3] = -10  # assign new value to 4th element     
 
-In [28]: l                                                                      
-Out[28]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9]
+In [28]: l[-3:]   # slice the list                                                             
+Out[28]: [7, 8, 9]
 
 In [29]: l[-3:] = [0,0,0]  # assigning an iterable with the same length as the slice
 
