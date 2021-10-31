@@ -100,6 +100,9 @@ also note that we have used `==` to check for equality, as `=` is used for varia
 >>> print
 5
 ```
+
+> Python allows assigning multiple variables an one go, e.g. `x, y, z = 1, 'abc', 3/4`.
+
 ---
 
 Now object `x`, our variable, has value `1` (`int` data type) and we can use `x` anywhere you would use `int` 1.
@@ -528,22 +531,36 @@ Note that we get an error message when we try to access fourth element `l[3]` (t
 
 > ***Tip 2***: you can create number sequences using `range()` and `list()`/`tuple()`.
 
+---
 > ***Warning***: Using variable names `l`, `I`, and `O` can be confusing, e.g. `l` can be misread as `I`, and
 is a practice that is frowned upon.
 
+> ***Unpacking lists*** : Lists can used to assign multiple variables in one go by unpacking them.
+
+```python
+>>> L = [1, 2, 'ab']
+>>> x, y, z = L  # needs same number of variable names
+>>> L1, *Lrest = L  # unpacks 1st element to L1 and the rest of the list to Lrest
+>>> print("x={}; y={}; z={}; L1={}; Lrest={}".format(x, y, z, L1, Lrest))
+x=1; y=2; z=ab; L1=1; Lrest=[2, 'ab']
+```
+
+---
+
 ### Changing List Elements, and Slicing
-You can change one element in a list by assigning new value to an element in the list, e.g. `l[3] = -10`, or a set of elements by slicing the list, e.g. `l[-2:]`
+You can access and change one element in a list by assigning new value to an element in the list, or a set of elements by slicing the list
 ```python
 In [27]: l[3] = -10                                                             
 
 In [28]: l                                                                      
 Out[28]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9]
 
-In [29]: l[-3:] = [0,0,0]  # assigning an iterable with same length as the slice
+In [29]: l[-3:] = [0,0,0]  # assigning an iterable with the same length as the slice
 
 In [30]: l                                                                      
 Out[30]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0]
 ```
+
 
 ### Appending to and Extending Lists, `pop()`, `del`, and `copy()`
 ```python
