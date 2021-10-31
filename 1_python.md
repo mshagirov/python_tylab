@@ -838,13 +838,13 @@ In [93]: plt.title('Title'); plt.legend();
 ---
 
 Please follow these links to learn more about NumPy and other packages that we will use soon:
-- [numpy tutorial](https://numpy.org/doc/stable/user/quickstart.html)
+- \[    ***Arrays***    \] [numpy tutorial](https://numpy.org/doc/stable/user/quickstart.html)
 to get an overview of `numpy`, and [https://numpy.org/learn/](https://numpy.org/learn/) for
 more NumPy tutorials.
-- [matplotlib](https://matplotlib.org/stable/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py)
-- [scipy](https://www.scipy.org/getting-started.html)
-- [scikit-image](https://scikit-image.org/docs/dev/user_guide/getting_started.html)
-- [pandas](https://pandas.pydata.org/docs/getting_started/index.html#intro-to-pandas)
+- \[   ***Plotting***   \] [matplotlib tutorials](https://matplotlib.org/stable/tutorials/index.html#advanced), esp. [`matplotlib.pyplot` tutorial](https://matplotlib.org/stable/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py).
+- \[***Linear Algebra, Numerical comp-s***\] [scipy guide](https://www.scipy.org/getting-started.html)
+- \[***Image Analysis***\] [scikit-image guide](https://scikit-image.org/docs/dev/user_guide/getting_started.html)
+- [pandas introduction](https://pandas.pydata.org/docs/getting_started/index.html#intro-to-pandas)
 
 ---
 
