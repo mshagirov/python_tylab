@@ -535,7 +535,7 @@ Note that we get an error message when we try to access fourth element `l[3]` (t
 > ***Warning***: Using variable names `l`, `I`, and `O` can be confusing, e.g. `l` can be misread as `I`, and
 is a practice that is frowned upon.
 
-> ***Unpacking lists*** : Lists can used to assign multiple variables in one go by unpacking them.
+> ***Unpacking lists*** : Lists can be used to assign multiple variables in one go by unpacking them.
 
 ```python
 >>> L = [1, 2, 'ab']
