@@ -365,7 +365,9 @@ nested for loops
 > ***Exercise*** : For all integers `n` in range \[0, 50\], depending on whether `n` is
 an even or an odd number, on a new line print integer `n` itself (i.e. once) if it
 is even, or if it is an odd number print `n` `n` number of times on a single line.
-E.g. for 2 print line `2` and for 3 print line `3 3 3`.
+E.g. for 2 print line `2` and for 3 print line `3 3 3`. Do this once with nested for loops,
+and once with a single for loop. (*Hints*: you may find modulus function `%` useful; 3*"ab"
+returns "ababab").
 
 After you are done practicing, you can close python interpreter by entering
 ```python
