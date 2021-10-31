@@ -616,7 +616,7 @@ del l  # deletes variable `l`
 
 ---
 
-Assigning lists to a new variable name does not create a new list. If two variables represent the same list object, changing one will change the other. To avoid assigning the same object to the new name, use `copy()` (see also [deepcopy](https://docs.python.org/3/library/copy.html)).
+Assigning lists to a new variable name does not create a new list, and changing one will change the other. To avoid assigning the same object to the new name, use `copy()` (see also [deepcopy](https://docs.python.org/3/library/copy.html)).
 ```python
 In [46]: a = l  # now var "a" points to var "l"
 
