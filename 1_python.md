@@ -608,7 +608,8 @@ Out[45]: [0, 1, 2, -10, 4]
 ```
 
 ---
-You can use `del` to delete all elements in the list, e.g. `del l[:]`, or delete the variable `l` (whole list)
+>You can use `del` to delete all elements in the list, e.g. `del l[:]`, or delete the variable `l` (whole list)
+
 ```python
 del l  # deletes variable `l`
 ```
