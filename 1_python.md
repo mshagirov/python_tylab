@@ -472,26 +472,35 @@ Let's get back to learning python, now using IPython.
 
 ## Lists, Tuples, Dictionaries
 
-As mentioned above, python has built-in container datatypes [list](https://docs.python.org/3/library/stdtypes.html#list), [tuple](https://docs.python.org/3/library/stdtypes.html#tuple), and [dict](https://docs.python.org/3/library/stdtypes.html#dict).
+As mentioned above, python has built-in container datatypes
+[list](https://docs.python.org/3/library/stdtypes.html#list),
+[tuple](https://docs.python.org/3/library/stdtypes.html#tuple), and
+[dict](https://docs.python.org/3/library/stdtypes.html#dict).
 
-> In addition to these, module [collections](https://docs.python.org/3/library/collections.html#module-collections) provides more specialised container datatypes that complement and extend these three built-in containers.
+> In addition to these, module [collections](https://docs.python.org/3/library/collections.html#module-collections)
+provides more specialised container datatypes that complement and extend these three built-in containers.
 
 ### Lists
 
-We can construct lists using the square brackets `[]`, or by converting iterable object, i.e. any python object that allows iterating over it, e.g. `str`, using `list()` function (this calls the initialisation function of a list object `__init__()` and constructs a new list object from the input `iterable` object). You can access list elements by indexing them (indexing starts from `0`), e.g. `a[0]` and `a[-1]` return first and last elements of a list `a`
+We can construct lists using the square brackets `[]`, or by converting iterable object,
+i.e. any python object that allows iterating over it, e.g. `str`, using `list()` function
+(this calls the initialisation function of a list object `__init__()` and constructs a new
+list object from the input `iterable` object). You can access list elements by indexing
+them (indexing starts from `0`), e.g. `a[0]` and `a[-1]` return first and last elements of
+a list `a`
 ```python
-In [13]: [1,2,3]                                                                
+In [13]: [1,2,3]
 Out[13]: [1, 2, 3]
 
-In [14]: l = [1,2,3]                                                            
+In [14]: l = [1,2,3]  
 
-In [15]: l[0]                                                                   
+In [15]: l[0]
 Out[15]: 1
 
-In [16]: l[1]                                                                   
+In [16]: l[1]
 Out[16]: 2
 
-In [17]: l[3]                                                                   
+In [17]: l[3]
 ---------------------------------------------------------------------------
 IndexError                                Traceback (most recent call last)
 <ipython-input-17-bb49eeb9f0db> in <module>
@@ -499,24 +508,24 @@ IndexError                                Traceback (most recent call last)
 
 IndexError: list index out of range
 
-In [18]: l[2]                                                                   
+In [18]: l[2]
 Out[18]: 3
 
-In [19]: l[-1]  # last element                                                               
+In [19]: l[-1]  # last element
 Out[19]: 3
 
-In [20]: len(l)                                                                 
+In [20]: len(l)
 Out[20]: 3
 
-In [21]: list('abcde')                                                          
+In [21]: list('abcde')
 Out[21]: ['a', 'b', 'c', 'd', 'e']                                                      
 
-In [22]: range(10)  # returns `range` iterator object                                                                     
+In [22]: range(10)  # returns `range` iterator object
 Out[22]: range(0, 10)
 
-In [23]: l = list(range(10))                                                    
+In [23]: l = list(range(10))
 
-In [24]: l                                                                      
+In [24]: l
 Out[24]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 In [25]: l[0]
@@ -525,10 +534,11 @@ Out[25]: 0
 In [26]: l[1] + 1
 Out[26]: 2
 
-In [27]: l                                                                      
+In [27]: l
 Out[27]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-Note that we get an error message when we try to access fourth element `l[3]` (that does not exist) in a list with only three elements.
+Note that we get an error message when we try to access fourth element `l[3]`
+(that does not exist) in a list with only three elements.
 
 > ***Tip 1***: use `len()` to check number of elements in container objects.
 
@@ -553,52 +563,52 @@ x=1; y=2; z=ab; L1=1; Lrest=[2, 'ab']
 ### Changing List Elements, and Slicing
 You can access and change one element in a list by assigning new value to an element in the list, or a set of elements by slicing the list
 ```python
-In [27]: l[3] = -10  # assign new value to 4th element     
+In [27]: l[3] = -10  # assign new value to 4th element
 
-In [28]: l[-3:]   # slice the list                                                             
+In [28]: l[-3:]   # slice the list   
 Out[28]: [7, 8, 9]
 
-In [29]: l[-3:] = [0,0,0]  # assigning an iterable with the same length as the slice
+In [29]: l[-3:] = [0,0,0] # assigning an iterable with the same length as the slice
 
-In [30]: l                                                                      
+In [30]: l
 Out[30]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0]
 ```
 
 
 ### Appending to and Extending Lists, `pop()`, `del`, and `copy()`
 ```python
-In [31]: l.append('abc')                                                        
+In [31]: l.append('abc')
 
-In [32]: l.append(math.e)                                                       
+In [32]: l.append(math.e)
 
-In [33]: l                                                                      
+In [33]: l
 Out[33]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0, 'abc', 2.718281828459045]
 
-In [34]: len(l)                                                                 
+In [34]: len(l)
 Out[34]: 12
 
-In [35]: l.pop()  # pop the last element                                                        
+In [35]: l.pop()  # pop the last element
 Out[35]: 2.718281828459045
 
-In [36]: l.pop()  # pop the last element                                                             
+In [36]: l.pop()  # pop the last element
 Out[36]: 'abc'
 
-In [37]: len(l)                                                                 
+In [37]: len(l)
 Out[37]: 10
 
-In [38]: l                                                                      
+In [38]: l
 Out[38]: [0, 1, 2, -10, 4, 5, 6, 7, 8, 9]
 
-In [39]: l.extend(['abc'])  # extend `l` with `['abc']`                                                   
+In [39]: l.extend(['abc'])  # extend `l` with `['abc']`
 
-In [40]: l.extend('abc')  # input can be any iterable, e.g. `str` object                                                  
+In [40]: l.extend('abc')  # input can be any iterable, e.g. `str` object
 
-In [41]: l                                                                      
+In [41]: l
 Out[41]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0, 'abc', 'a', 'b', 'c']
 
-In [42]: l.extend(range(2))                                                 
+In [42]: l.extend(range(2))
 
-In [43]: l                                                                      
+In [43]: l
 Out[43]: [0, 1, 2, -10, 4, 5, 6, 0, 0, 0, 'abc', 'a', 'b', 'c', 0, 1]
 ```
 
@@ -606,7 +616,7 @@ Let's use `del` function to delete all elements starting with index `5` to the l
 ```python
 In [44]: del l[5:]  # delete all elem-s starting with and including index `5`
 
-In [45]: l                                                                      
+In [45]: l
 Out[45]: [0, 1, 2, -10, 4]
 ```
 
@@ -661,18 +671,18 @@ can be accessed by indexing and slicing. You can create tuples using brackets `(
 separated by commas to a single variable.
 
 ```python
-In [58]: t = ()  # an empty tuple                                               
+In [58]: t = ()  # an empty tuple
 
-In [59]: t2 = ('abc', )  # tuple with one element                               
+In [59]: t2 = ('abc', )  # tuple with one element
 
-In [60]: t3 = 1, 2 , t2  # tuple packing; heterogenous sequence                   
+In [60]: t3 = 1, 2 , t2  # tuple packing; heterogenous sequence
 
 In [61]: print(f't: {t}/nt2: {t2}/nt3: {t3}')  # print variables
 t: ()
 t2: ('abc',)
 t3: (1, 2, ('abc',))
 
-In [62]: t3[-2]                                                                 
+In [62]: t3[-2]
 Out[62]: 2
 
 In [63]: t[0] = 0   # tuples are immutable and can't be changed
@@ -700,12 +710,12 @@ Compared to lists, strings, and tuples which use numbers as indices, `dict` uses
 immutable data type (e.g. `int`, `str`, `tuple`, etc.). Following are examples for creating dictionaries.
 
 ```python
-In [64]: d = {'a': 2, 1: 'b', 'c': 10}                                          
+In [64]: d = {'a': 2, 1: 'b', 'c': 10}
 
-In [65]: d                                                                      
+In [65]: d
 Out[65]: {'a': 2, 1: 'b', 'c': 10}
 
-In [66]: dict(((1,2), ('a', 3), 'ed', ['hello', 10]))                           
+In [66]: dict(((1,2), ('a', 3), 'ed', ['hello', 10]))
 Out[66]: {1: 2, 'a': 3, 'e': 'd', 'hello': 10}
 ```
 
@@ -714,31 +724,31 @@ You can use use the `in` keyword to check whether a key is in the dictionary. Li
 on a dictionary returns a list of keys, and applying `sorted()` returns sorted list of keys.
 
 ```python
-In [67]: 'c' in d                                                               
+In [67]: 'c' in d
 Out[67]: True
 
-In [68]: 1 in d                                                                 
+In [68]: 1 in d
 Out[68]: True
 
-In [69]: 10 in d                                                                
+In [69]: 10 in d
 Out[69]: False
 
 In [70]: for k in d:
     ...:     print('key: ',k,'; value: ', d[k])
-    ...:                                                                        
+    ...:     
 key:  a ; value:  2
 key:  1 ; value:  b
 key:  c ; value:  10
 
-In [71]: list(d)                                                                
+In [71]: list(d)
 Out[71]: ['a', 1, 'c']
 
-In [72]: d2 = {'c':0, 'a':1, 'b':2}                                             
+In [72]: d2 = {'c':0, 'a':1, 'b':2}
 
-In [73]: d2                                                                     
+In [73]: d2
 Out[73]: {'c': 0, 'a': 1, 'b': 2}
 
-In [74]: sorted({'c':0, 'a':1, 'b':2})                                          
+In [74]: sorted({'c':0, 'a':1, 'b':2})
 Out[74]: ['a', 'b', 'c']
 ```
 
@@ -748,34 +758,42 @@ Out[74]: ['a', 'b', 'c']
 Another convenient way to create lists in python is to use list comprehensions. E.g.:
 
 ```python
-In [75]:  l = [k for k in range(10)]                                            
+In [75]:  l = [k for k in range(10)]
 
-In [76]: l                                                                      
+In [76]: l            
 Out[76]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-In [77]: [k for k in 'abcde']                                                 
+In [77]: [k for k in 'abcde']
 Out[77]: ['a', 'b', 'c', 'd', 'e']
 
-In [78]: [(k,m) for k in range(2) for m in range(3)]  # list of tuples          
+In [78]: [(k,m) for k in range(2) for m in range(3)]  # list of tuples
 Out[78]: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
 ```
-Similarly for dictionaries we can use "dict comprehensions", as long as keys are immutable types.
+Similarly for dictionaries we can use "dict comprehensions", as long as keys are
+immutable types.
 
 ```python
-In [79]: {k: k+k for k in range(3)}                                             
+In [79]: {k: k+k for k in range(3)}
 Out[79]: {0: 0, 1: 2, 2: 4}
 
-In [80]: {k : v for k, v in zip(['a', 'b' , 'see'], range(3))}                  
+In [80]: {k : v for k, v in zip(['a', 'b' , 'see'], range(3))}
 Out[80]: {'a': 0, 'b': 1, 'see': 2}
 ```
 
 ## Numpy and Its Friends
-It's all good, but using built-in lists/tuples/dict/ etc. is not convenient when working with arrays, and how do you even do plotting?! For instance, in Matlab there are purpose built data types and operations for working with arrays
-(e.g. arrays, and linear algebra tools). Python's built-in modules do not include such tools, instead Python users generally use various
-specialised packages such as [`numpy`](https://numpy.org) for array operations, [`scipy` library](https://www.scipy.org) for linear algebra, statistics, numerical integration and other numerical functions, and [`matplotlib`](https://matplotlib.org) for plotting and visualisation.
-Your standard Anaconda installation comes with all these packages and more.
+It's all good, but using built-in lists/tuples/dict/ etc. is not convenient when
+working with arrays, and how do you even do plotting?! For instance, in Matlab
+there are purpose built data types and operations for working with arrays
+(e.g. arrays, and linear algebra tools). Python's built-in modules do not include
+such tools, instead Python users generally use various specialised packages such
+as [`numpy`](https://numpy.org) for array operations,
+[`scipy` library](https://www.scipy.org) for linear algebra, statistics,
+numerical integration and other numerical functions, and
+[`matplotlib`](https://matplotlib.org) for plotting and visualisation. Your standard
+Anaconda installation comes with all these packages and more.
 
-Numpy and Matplotlib functions (or interfaces for functions) with Matlab-like syntax, following should be familiar to Matlab users.
+Numpy and Matplotlib provides functions, or interfaces for their functions, with Matlab-like syntax.
+Following code snippets should be familiar to Matlab users.
 
 ```python
 In [81]: import numpy as np                                                     
@@ -791,7 +809,7 @@ array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
        [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
 ```
 
-Depending on your system and IPython version, you might need to set a backend for Matplotlib's using
+> Depending on your system and IPython version, you might need to set a backend for Matplotlib's using
 `%matplotlib` (this uses the default backend, starting with `IPython 5.0` and `matplotlib 2.0` this
 step is not required).
 
@@ -818,16 +836,16 @@ In [93]: plt.title('Title'); plt.legend();
 ```
 ![](./images/example_plot.png)
 ---
-> \[***Suggestion***\]: refer to [numpy tutorial](https://numpy.org/doc/stable/user/quickstart.html) to get an overview of `numpy`, and
-[https://numpy.org/learn/](https://numpy.org/learn/) for more NumPy tutorials.
 
-> [`skimage`](https://scikit-image.org)
+Please follow these links to learn more about NumPy and other packages that we will use soon:
+- [Numpy tutorial](https://numpy.org/doc/stable/user/quickstart.html)
+to get an overview of `numpy`, and [https://numpy.org/learn/](https://numpy.org/learn/) for
+more NumPy tutorials.
+- [scipy tutorial](https://www.scipy.org/getting-started.html)
+- [scikit-image](https://scikit-image.org/docs/dev/user_guide/getting_started.html)
+- [pandas](https://pandas.pydata.org/docs/getting_started/index.html#intro-to-pandas)
 
 ---
-
-```python
-In [1]: from  skimage.io import imread    
-```
 
 ## Closing Python Interpreter and IPython Shell
 Use `exit()` or <kbd>Ctrl</kbd> + <kbd>D</kbd>.
