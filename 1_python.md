@@ -364,6 +364,9 @@ nested for loops
 3
 ```
 
+> Python also provides functions for parallel iteration over several sequences, and enumerating
+sequences. *See [`zip`](https://docs.python.org/3/library/functions.html#zip) and [`enumerate`](https://docs.python.org/3/library/functions.html#enumerate)*.    
+
 ---
 > ***Exercise*** : For all integers `n` in range \[0, 50\], depending on whether `n` is
 an even or an odd number, on a new line print integer `n` itself (i.e. once) if it
@@ -692,71 +695,78 @@ TypeError: 'tuple' object does not support item assignment
 ---
 
 ### Dictionaries
+Dictionary (`dict`) is another mutable container data type in python that represent a set of (key, value) pairs.
+Compared to lists, strings, and tuples which use numbers as indices, `dict` uses keys as indices. Keys can be of any
+immutable data type (e.g. `int`, `str`, `tuple`, etc.). Following are examples for creating dictionaries.
+
 ```python
-In [147]: # dict
+In [64]: d = {'a': 2, 1: 'b', 'c': 10}                                          
 
-In [148]: d = {'a': 2}
+In [65]: d                                                                      
+Out[65]: {'a': 2, 1: 'b', 'c': 10}
 
-In [149]: d
-Out[149]: {'a': 2}
-
-In [150]: d['a']
-Out[150]: 2
-
-In [151]: for k in d: print(k);
-a
-
-In [152]: # loops through keys in "d"
-
-In [153]: for k in d: print(d[k]);
-2
+In [66]: dict(((1,2), ('a', 3), 'ed', ['hello', 10]))                           
+Out[66]: {1: 2, 'a': 3, 'e': 'd', 'hello': 10}
 ```
 
-### List Comprehensions
-> More about: [list compehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions).
+You can use use the `in` keyword to check whether a key is in the dictionary. Like other containers we saw above,
+`dict` type objects are iterable, but compared to for instance `list`, in dictionaries we iterate over the keys. Applying `list()`
+on a dictionary returns a list of keys, and applying `sorted()` returns sorted list of keys.
 
 ```python
-In [58]: l = [k for k in range(10)]
+In [67]: 'c' in d                                                               
+Out[67]: True
 
-In [59]: l
-Out[59]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+In [68]: 1 in d                                                                 
+Out[68]: True
 
-In [60]: [k for k in 'abcde']
-Out[60]: ['a', 'b', 'c', 'd', 'e']
+In [69]: 10 in d                                                                
+Out[69]: False
 
-In [61]: # list of lists
+In [70]: for k in d:
+    ...:     print('key: ',k,'; value: ', d[k])
+    ...:                                                                        
+key:  a ; value:  2
+key:  1 ; value:  b
+key:  c ; value:  10
 
-In [62]: [(k,m) for k in range(3) for m in range(4)]
-Out[62]:
-[(0, 0),
- (0, 1),
- (0, 2),
- (0, 3),
- (1, 0),
- (1, 1),
- (1, 2),
- (1, 3),
- (2, 0),
- (2, 1),
- (2, 2),
- (2, 3)]
+In [71]: list(d)                                                                
+Out[71]: ['a', 1, 'c']
 
-In [63]: # nested list comprehensions
+In [72]: d2 = {'c':0, 'a':1, 'b':2}                                             
 
-In [64]: [[k,m] for k in range(3) for m in range(4)]
-Out[64]:
-[[0, 0],
- [0, 1],
- [0, 2],
- [0, 3],
- [1, 0],
- [1, 1],
- [1, 2],
- [1, 3],
- [2, 0],
- [2, 1],
- [2, 2],
- [2, 3]]
+In [73]: d2                                                                     
+Out[73]: {'c': 0, 'a': 1, 'b': 2}
+
+In [74]: sorted({'c':0, 'a':1, 'b':2})                                          
+Out[74]: ['a', 'b', 'c']
+```
+
+### List Comprehensions, and Dict comprehensions
+> More about: [list compehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions).
+
+Another convenient way to create lists in python is to use list comprehensions. E.g.:
+
+```python
+In [75]:  l = [k for k in range(10)]                                            
+
+In [76]: l                                                                      
+Out[76]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [77]: [k for k in 'abcde']                                                 
+Out[77]: ['a', 'b', 'c', 'd', 'e']
+
+In [78]: [(k,m) for k in range(2) for m in range(3)]  # list of tuples          
+Out[78]: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
+```
+Similarly for dictionaries we can use "dict comprehensions", as long as keys are immutable types.
+
+```python
+In [79]: {k: k+k for k in range(3)}                                             
+Out[79]: {0: 0, 1: 2, 2: 4}
+
+In [80]: {k : v for k, v in zip(['a', 'b' , 'see'], range(3))}                  
+Out[80]: {'a': 0, 'b': 1, 'see': 2}
 ```
 
 ## Numpy
