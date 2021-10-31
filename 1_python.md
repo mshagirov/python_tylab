@@ -833,6 +833,8 @@ In [91]: plt.xlabel('x');
 In [92]: plt.ylabel('y');                                                      
 
 In [93]: plt.title('Title'); plt.legend();
+
+In [94]: plt.show()
 ```
 ![](./images/example_plot.png)
 ---
