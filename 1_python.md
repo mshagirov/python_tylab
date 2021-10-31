@@ -529,7 +529,7 @@ Note that we get an error message when we try to access fourth element `l[3]` (t
 > ***Tip 2***: you can create number sequences using `range()` and `list()`/`tuple()`.
 
 > ***Warning***: Using variable names `l`, `I`, and `O` can be confusing, e.g. `l` can be misread as `I`, and
-is a bad practice that is frowned upon.
+is a practice that is frowned upon.
 
 ### Changing List Elements, and Slicing
 You can change one element in a list by assigning new value to an element in the list, e.g. `l[3] = -10`, or a set of elements by slicing the list, e.g. `l[-2:] =  [0,0,0]`
