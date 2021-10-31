@@ -651,7 +651,8 @@ In [57]: a
 Out[57]: [-10, 1, 2, 4, 100]
 ```
 ### Tuples
-Tuples are another standard sequences data type in python similar to strings and lists. Compared with lists, tuples
+[Tuples](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) are another standard
+sequences data type in python similar to strings and lists. Compared with lists, tuples
 and strings are [immutable](https://docs.python.org/3/glossary.html#term-immutable), but same as lists their elements
 can be accessed by indexing and slicing. You can create tuples using brackets `()`, or by assigning a number of values
 separated by commas to a single variable.
