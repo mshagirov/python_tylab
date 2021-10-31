@@ -93,7 +93,7 @@ also note that we have used `==` to check for equality, as `=` is used for varia
 ```
 
 ---
-> You can use any name for your variables. This means that you need to be careful to not overwrite built-in objects in python. For example, do not do this
+> You can use any name for your variables. ***This means that you need to be careful to not overwrite built-in objects in python***. For example, do not do this
 
 ```python
 >>> print=5  # now print() is overwritten`
