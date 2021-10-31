@@ -451,7 +451,7 @@ np         module    <module 'numpy' from '/Us<...>kages/numpy/__init__.py'>
 x          int       1
 ```
 
-See how `whos` lists all variables (objects) in your IPython environment with their names (`Variable`) and values (`Data/Info`)? Do remember typing a very long `help()` function to lookup documentation for functions and objects, well in IPython you just add suffix `?` to your function/object to do the same.
+See how `whos` lists all variables (objects) in your IPython environment with their names (`Variable`) and values (`Data/Info`)? Do you remember typing a very long `help()` function to lookup documentation for functions and objects, well in IPython you just add suffix `?` to your function/object to do the same.
 
 ```python
 In [11]: list?
