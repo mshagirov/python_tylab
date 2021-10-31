@@ -769,32 +769,63 @@ In [80]: {k : v for k, v in zip(['a', 'b' , 'see'], range(3))}
 Out[80]: {'a': 0, 'b': 1, 'see': 2}
 ```
 
-## Numpy
+## Numpy and Its Friends
+It's all good, but using built-in lists/tuples/dict/ etc. is not convenient when working with arrays, and how do you even do plotting?! For instance, in Matlab there are purpose built data types and operations for working with arrays
+(e.g. arrays, and linear algebra tools). Python's built-in modules do not include such tools, instead Python users generally use various
+specialised packages such as [`numpy`](https://numpy.org) for array operations, [`scipy` library](https://www.scipy.org) for linear algebra, statistics, numerical integration and other numerical functions, and [`matplotlib`](https://matplotlib.org) for plotting and visualisation.
+Your standard Anaconda installation comes with all these packages and more.
+
+Numpy and Matplotlib functions (or interfaces for functions) with Matlab-like syntax, following should be familiar to Matlab users.
+
+```python
+In [81]: import numpy as np                                                     
+
+In [82]: np.ones?                                                               
+
+In [83]: np.ones(10)                                                            
+Out[83]: array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
+
+In [84]: np.ones((2,10))                                                        
+Out[84]:
+array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
+```
+
+Depending on your system and IPython version, you might need to set a backend for Matplotlib's using
+`%matplotlib` (this uses the default backend, starting with `IPython 5.0` and `matplotlib 2.0` this
+step is not required).
+
+```python       
+In [85]: import matplotlib.pyplot as plt  # pyplot interface to matplotlib                                  
+
+In [86]: import matplotlib
+
+In [87]:  %matplotlib   #  ipython magic to set matplotlib backend
+Using matplotlib backend: Qt5Agg
+
+In [88]: x, y = np.linspace(-10,10,100), np.random.rand(100)
+
+In [89]: plt.plot(x, y, '-o', mfc='r', ms=10, label='Uniform noise')  # this returns Line2D object
+Out[89]: [<matplotlib.lines.Line2D at 0x7fa98d1fb940>]
+
+In [90]: plt.plot(x, 0.5*np.ones(100), 'b', alpha=0.5, lw=3);  # ; suppresses output from plot
+
+In [91]: plt.xlabel('x');
+
+In [92]: plt.ylabel('y');                                                      
+
+In [93]: plt.title('Title'); plt.legend();
+```
+![](./images/example_plot.png)
 ---
-> Suggestion: refer to [numpy tutorial](https://numpy.org/doc/stable/user/quickstart.html) to get an overview of `numpy`.
+> \[***Suggestion***\]: refer to [numpy tutorial](https://numpy.org/doc/stable/user/quickstart.html) to get an overview of `numpy`, and
+[https://numpy.org/learn/](https://numpy.org/learn/) for more NumPy tutorials.
+
+> [`skimage`](https://scikit-image.org)
 
 ---
 
 ```python
-In [24]: np.ones(10)
-Out[24]: array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
-
-In [25]: type(np.ones(10))
-Out[25]: numpy.ndarray
-
-In [26]: np.ones((10,3))
-Out[26]:
-array([[1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.],
-       [1., 1., 1.]])
-
 In [1]: from  skimage.io import imread    
 ```
 
