@@ -285,7 +285,7 @@ Another very useful function for understanding objects is `help()`. `help()` wil
 >>> help(str)
 ```
 
-> Tip : For long documentation `help()` opens a separate "window", which you can close by pressing <kbd>Q</kbd> after you finish reading it.
+> ***Tip*** : For long documentation `help()` opens a separate "window", which you can close by pressing <kbd>Q</kbd> after you finish reading it.
 
 > As a practice exercise, use `dir` and `help` to learn about `str.format()`, other objects, and their methods and attributes.
 E.g. create a string and use `dir` to explore it, then open help for `str.format()` for your string
@@ -318,7 +318,7 @@ d
 4
 ```
 
-> Tip : if you accidentally run an infinite `while` loop or a long and computationally intensive
+> ***Tip*** : if you accidentally run an infinite `while` loop or a long and computationally intensive
 `for` loop and want to cancel your command, use <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel and exit the loop.
 
 ```python
@@ -524,11 +524,11 @@ Out[27]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 Note that we get an error message when we try to access fourth element `l[3]` (that does not exist) in a list with only three elements.
 
-> Tip 1: use `len()` to check number of elements in container objects.
+> ***Tip 1***: use `len()` to check number of elements in container objects.
 
-> Tip 2: you can create number sequences using `range()` and `list()`/`tuple()`.
+> ***Tip 2***: you can create number sequences using `range()` and `list()`/`tuple()`.
 
-> Warning: Using letters `l`, `I`, and `O` can be confusing, e.g. l can be misread as I, and
+> ***Warning***: Using letters `l`, `I`, and `O` can be confusing, e.g. l can be misread as I, and
 is a bad practice that is frowned upon.
 
 ### Changing List Elements, and Slicing
