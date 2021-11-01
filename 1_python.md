@@ -249,7 +249,7 @@ As you have probably guessed, you can construct strings (`str` objects) using `"
 ```
 
 ###  `dir()` and `help()`
-When working with new and unfamiliar objects and variables you might find function `dir()` which lists all obejct's attributes ("browse" through what is inside the object) very useful. For instance, let's list all attributes of `x` (which is `int` type).
+When working with new and unfamiliar objects and variables you might find function `dir()` which lists all object's attributes ("browse" through what is inside the object) very useful. For instance, let's list all attributes of `x` (which is `int` type).
 
 ```python
 >>> x = 1  # assign integer to x
