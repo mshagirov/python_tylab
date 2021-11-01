@@ -101,7 +101,7 @@ also note that we have used `==` to check for equality, as `=` is used for varia
 5
 ```
 
-> Python allows assigning multiple variables an one go, e.g. `x, y, z = 1, 'abc', 3/4`.
+> Python allows assigning multiple variables on one go, e.g. `x, y, z = 1, 'abc', 3/4`.
 
 ---
 
