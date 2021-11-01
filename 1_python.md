@@ -191,7 +191,7 @@ You can check type of all variables (i.e. objects) in python using `type()` func
 <class 'float'>
 >>> float(1)  # typecast/convert integer to float
 1.0
->>> 1.  # adding decimal "." tell python to treat input as float
+>>> 1.  # adding decimal "." tells python to treat input as float
 1.0
 >>> 2039349
 2039349
