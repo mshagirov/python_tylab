@@ -310,6 +310,7 @@ d
 0
 1
 2
+>>> k = 0
 >>> while k<4:  # "k<4" part should evaluate to `bool` True/False
 ...     # do something here
 ...     k+=1  # this will make sure that we don't get an infinite loop
