@@ -6,3 +6,4 @@ Learning Python and Jupyter Notebook
 1. [Python and ipython](./1_python.md)
 2. [First notebook](./nbs/session_2.ipynb)
 3. [Working with tabular data (Pandas)](./nbs/session_3.ipynb)
+4. [Basic Statistics (with Python)](./nbs/session_4.ipynb) by Assoc. Prof. Yusuke Toyama.
