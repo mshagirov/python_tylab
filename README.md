@@ -8,4 +8,4 @@ Learning Python and Jupyter Notebook
 3. [Working with tabular data (Pandas)](./nbs/session_3.ipynb)
 4. [Basic Statistics (with Python)](./nbs/session_4.ipynb) by Assoc. Prof. Yusuke Toyama.
     1. [Self-paced review of "Basic Statistics" session](./nbs/session_4_review.ipynb) (Review of probability plots, checking for normal distrib-n, and q-q plots)
-6. More Statistics by Assoc Prof. YT
+6. [Statistical Tests](./nbs/session5/session5-material.ipynb) by Assoc Prof. YT.
